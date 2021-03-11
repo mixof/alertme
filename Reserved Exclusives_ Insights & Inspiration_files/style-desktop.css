@@ -1,0 +1,401 @@
+@media screen and (max-width: 1300px){
+    /*Start of: featured title on serach-results page*/
+    .featured-title{
+        font-size: 1.8vw;
+    }
+    /*End of: featured title on serach-results page*/
+    hr{
+        margin: 0;
+    }
+    .wrapper{
+        max-width: 92vw;
+    }
+    .content{
+        padding-bottom: 54px;
+    }
+    /*.top-toolbar .logo{*/
+    /*padding: 1.9vw 0;*/
+    /*margin-left: 2vw;*/
+    /*width: 11vw;*/
+    /*}*/
+    .line{
+        margin-left: 1vw;
+    }
+    .line.line-featured-offers{
+        width: 82%;
+    }
+    .line.line-featured-article{
+        width: 80%;
+    }
+    .line.line-more{
+        width: 77%;
+    }
+    .top-menu li > a{
+        padding: 30px 1.8vw;
+    }
+    .top-menu li.user>a span{
+        /* padding-left: 1.8vw; */
+    }
+    body.user-authorized .top-menu li.user>a:after{
+        /*padding-right: 1.8vw;*/
+    }
+    .top-banner .bx-controls {
+        bottom: 2.1vw;
+        left: 0;
+        width: 100%;
+    }
+    .top-banner .bx-wrapper .bx-pager{
+        bottom: 1.5vw;
+    }
+    .infoblock-list{
+        margin: 5.5vw 0 0;
+    }
+    .infoblock-list.offers{
+	    margin: calc(60px - 1.875vw) 0 0;
+	}
+    .infoblock-list .infoblock-title{
+        font-size: 1.8vw;
+    }
+    .infoblock-list .infoblock-list-item{
+        width: 32%;
+        margin: 1.875vw 0 0;
+    }
+    #search-result .infoblock-list .infoblock-list-item{
+        margin-right: 2%;
+    }
+    #search-result .infoblock-list .infoblock-list-item:nth-of-type(3n+3){
+        margin-right: 0;
+    }
+    .infoblock-list .infoblock-list-item.center{
+        margin: 1.875vw 2% 0;
+    }
+    .infoblock-list .infoblock-list-item .infoblock-list-item-img{
+        height: 28.9vw;
+    }
+    .infoblock-list .infoblock-list-item .infoblock-list-item-content{
+        height:21vw;
+        padding: 1.55vw 2.03vw;
+    }
+
+
+    .infoblock-list .infoblock-list-item .infoblock-list-item-content .access-label{
+      top: 1.05vw;
+      padding: 0.39vw 1.34vw;
+      font-size: 1.07vw;
+    }
+
+    .infoblock-list .infoblock-list-item.benefit-ads-item .infoblock-list-item-content:after {
+        border: 1.7vw solid transparent;
+        left: 10%;
+        bottom: 100%;
+        border-bottom-color: #fff;
+    }
+    .infoblock-list .infoblock-list-item.benefit-ads-item .infoblock-list-item-content:before{
+        border: 1.78vw solid transparent;
+        border-width: calc(1.7vw + 1px); 
+        left: calc(10% - 1px);
+        bottom: 100%;
+        border-bottom-color: #ccc;
+    }
+    .infoblock-list .infoblock-list-item .infoblock-list-item-crtitle{
+        /*font-size: 1.3vw;*/
+        margin-bottom: 1.25vw;
+    }
+    .infoblock-list .infoblock-list-item .infoblock-list-item-title{
+        font-size: 2.35vw;
+        margin-bottom: 1.23vw;
+    }
+    .infoblock-list .infoblock-list-item .infoblock-list-item-body{
+        font-size: 1.25vw;
+        margin-bottom: 1.3vw;
+    }
+    .infoblock-list .infoblock-list-item.benefit-ads-item .infoblock-list-item-body{
+        overflow-y: hidden;
+        height: auto;
+       
+    }
+    .infoblock-list .infoblock-list-item .infoblock-list-item-link{
+        font-size: 1.25vw;
+    }
+
+    .infoblock-list .infoblock-list-item.two-columns{
+        width: 66%;
+        background-size:cover!important;
+        margin: 1.875vw 2% 0 0;
+    }
+    .infoblock-list .infoblock-list-item.two-columns .infoblock-list-item-content{
+        padding:4.9vw 50% 0 2.18vw;
+        height: 49.8vw;
+    }
+    .infoblock-list .infoblock-list-item.two-columns .infoblock-list-item-crtitle{
+        /*font-size: 0.687vw;*/
+        margin-bottom: 3.3vw;
+    }
+    .infoblock-list .infoblock-list-item.two-columns .infoblock-list-item-title{
+        font-size: 3.75vw;
+        margin-bottom: 1.4vw;
+    }
+    .infoblock-list .infoblock-list-item.two-columns .infoblock-list-item-body{
+        margin-bottom: 1.5vw;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns{
+        width: 49%;
+        margin: 1.875vw 2% 1.875vw 0;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns+.one-and-half-columns{
+        margin: 1.875vw 0 1.875vw 0;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns .infoblock-list-item-img{
+        height: 21.87vw;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns .infoblock-list-item-content{
+        height: 17.18vw;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns.purple,.infoblock-list .infoblock-list-item.one-and-half-columns.four-color{
+        height: 31.44vw;
+    }
+    .infoblock-list-item.one-and-half-columns.four-color>span{
+        padding: 6.5vw 19vw 0 3.25vw;
+    }
+    .four-color .four-color-title{
+        font-size: 1.53vw;
+        margin: 0 0 0.8vw;
+    }
+    .four-color .four-color-text{
+        font-size: 1.53vw;
+    }
+    .four-color .offer-link{
+        font-size: 1.4vw;
+        margin-top:1.5vw; 
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns.purple .infoblock-list-item-content:before{
+        height: 4.2vw;
+        font-size: 7vw;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns.purple .infoblock-list-item-crtitle{
+        font-size: 1.65vw;
+        line-height: 1.3;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns.purple .infoblock-list-item-title{
+        font-size: 0.95vw;
+        margin-bottom: 0.4vw;
+    }
+    .purple .bx-wrapper .bx-pager{
+        bottom: 2vw;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns.on-form.copy-echo .infoblock-list-item-content{
+        height: 31.44vw;
+        padding: 1.55vw 2.03vw;////
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns.on-form .infoblock-list-item-crtitle{
+        font-size: 2.81vw;
+        margin-bottom: 1.25vw;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns.on-form .infoblock-list-item-title{
+        font-size: 1.4vw;
+        margin-bottom: 1.25vw;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns.on-form .infoblock-list-item-body .radio:not(checked) + label {
+        position: relative;
+        padding: 0 0 0 2vw;
+        margin-bottom: 0.35vw;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns.on-form .infoblock-list-item-body .buttons{
+        margin: 20px 0 0;
+    }
+    .infoblock-list .infoblock-list-item.one-and-half-columns.on-form .infoblock-list-item-body{
+        font-size: 1.4vw;
+    }
+
+    /*--------------------------------------------------------*/
+    .have-questions{
+        padding: 2.6vw 0;
+        font-size: 1.56vw;
+    }
+    .have-questions .have{
+        font-size: 1.85vw;
+    }
+    .have-questions .phone{
+        font-size: 1.85vw;
+    }
+    .footer{
+        padding-bottom: 8.43vw;
+    }
+    .footer .footer-menu{
+        height: 8.43vw;
+        line-height: 8.43vw;
+    }
+    .footer .footer-menu.top-footer a{
+        /*font-size: 1.25vw;*/
+    }
+    .footer .footer-menu li{
+        margin-right:2.3vw;
+        padding-left: 1vw;
+    }
+    .footer .footer-menu li:before{
+        height: 0.625vw;
+        left: -1.875vw;
+        top: -0.1563vw;
+        width: 0.625vw;
+    }
+    .footer .footer-menu li a{
+        /*font-size: 0.9vw;*/
+    }
+    .footer .footer-bottom{
+        /*font-size: 0.9vw;*/
+    }
+    .infoblock-list .infoblock-list-item .icon-world{
+        /* top: 1.8vw; */
+        bottom: 2.6vw;
+    }
+    .infoblock-list.turnabout .infoblock-list-item{
+        margin: 0 1.8vw 0 0;
+    }
+
+    /*---NEW---*/
+    .title-image{
+        background-size: cover;
+    }
+    .hide-slider .infoblock-list{
+        width: 999999%!important;
+    }
+    .hide-slider .bx-wrapper{
+        max-width: 80vw!important;
+    }
+    .hide-slider .infoblock-list .infoblock-list-item{
+        width: 25.49vw!important;
+        margin-right: 1.23vw!important;
+    }
+    .hide-slider .infoblock-list .infoblock-list-item .infoblock-list-item-img{
+        height: 25vw;
+    }
+    /*---NEW---*/
+    .mini-items .podch .mini-item .img/*,.mini-items .glav .mini-item .img*/{
+        height: 22vw;
+    }
+    .mini-items .podch .mini-item .mini-item-content .title{
+        margin-bottom: 2vw;
+        font-size: 1.5vw;
+    }
+    .mini-items .podch .mini-item .text{
+        font-size: 1.29vw;
+    }
+    .podch .mini-item .mini-item-content{
+        height: 28vw;
+        padding: 1.7vw;
+    }
+}
+@media screen and (max-width: 1300px) and (min-width: 641px){
+    /*client stories*/
+    .infoblock-small-item{
+        width: 48%;
+        margin: 2.3vw 0;
+    }
+    .infoblock-small-item:nth-child(2n){
+        margin-right:4%;
+    }
+    .infoblock-small-item .small-content{
+        padding:2.3vw 0 0 2.3vw;
+    }
+    .infoblock-small-item .title{
+        font-size: 1.6vw;
+        color:#333;
+        margin-bottom: 1.6vw;
+        font-family: "Karla Bold";
+    }
+    .infoblock-small-item .text{
+        font-size: 1.2vw;
+        color:#707070;
+        font-family: 'Karla Regular';
+        margin-bottom: 1.9vw;
+    }
+    .infoblock-small-item .link{
+        color:#333;
+        font-family: 'Karla Regular';
+        font-size: 1.8vw;
+    }
+    .infoblock-list.giv-back-landing{
+        padding:5px 0 20px;
+    }
+    .button.gray.giv-back-landing{
+        margin-top: 3.1vw;
+    }
+    .check-out{
+        height: auto;
+    }
+    .check-out .check-out-content{
+        padding: 50px;
+        height: auto;
+    }
+    .user-profile .user-information  input,.user-profile label>select{
+        width: 350px;
+    }
+    .user-profile .user-information .for-date select{
+        width: 95px;
+    }
+    .user-profile label.checkbox.padding{
+        padding-left: 10.7%;
+    }
+
+
+    .qqq{
+        height: 29.3vw;
+        margin-top: 3.46vw;
+    }
+    .qqq .qqq-content{
+        padding: 2.7vw 4.75vw 3.07vw 3.2vw;
+    }
+    .menu-categories-block .menu-categories li a{
+        padding: 2.7vw 3.07vw;
+        font-size: 1.38vw;
+    }
+    .qqq-content .qqq-title{
+        font-size: 1.23vw;
+        padding-bottom: 2.3vw;
+    }
+    .qqq-content .qqq-text{
+        font-size: 2.3vw;
+        padding-bottom: 1.9vw;
+    }
+    .qqq-content .qqq-link{
+        font-size: 1.23vw;
+    }
+    .happy-holiday{
+        padding: 6.9vw 0 0;
+        font-size: 4.23vw;
+    }
+    .hd-banner-title{
+        font-size: 6.9vw;
+    }
+    .hd-banner-text{
+        font-size: 1.6vw;
+    }
+    .hd-banner-content{
+        width: 58vw;
+    }
+    .hd-banner{
+        height: 46.5vw;
+    }
+}
+@media screen and (max-width: 1400px) and (min-width: 1001px){
+    .user-authorized.os .top-toolbar .reserved-text{
+        display: none;
+    }
+}
+@media screen and (max-width: 1300px) and (min-width: 1001px){
+    .infoblock-list.turnabout .infoblock-list-item{
+        width: 29.4vw!important;
+    }
+    .turnabout .bx-wrapper .bx-controls-direction a.bx-prev{
+        left: -30px;
+    }
+    .turnabout .bx-wrapper .bx-controls-direction a.bx-next{
+        right: -30px;
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1090px)  {
+  .infoblock-list .infoblock-list-item .infoblock-list-item-content .access-label{
+    padding: 0.39vw 0.94vw;
+  }
+}

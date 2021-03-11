@@ -1,0 +1,95 @@
+@media print{
+	.navigation-tool-impl {
+		display: none;
+	}
+	
+	.saks-fifth-avenue img.full,
+	.compact-print img.full {
+		max-width: 25% !important;
+	}
+	
+	.saks-fifth-avenue p,
+	.compact-print p,
+	.compact-print ul {
+		font-size: 15px !important;
+		line-height: 1.3 !important;
+		margin: 0;
+	}
+	.compact-print ul {
+		margin: 10px auto !important;
+	}
+
+	.saks-fifth-avenue p.terms,
+	.compact-print p.terms,
+	.compact-print ul.terms,
+	.compact-print ul.terms li {
+		font-size: 10px !important;
+		line-height: 1.3 !important;
+	}
+	
+	.saks-fifth-avenue .crc-code,
+	.compact-print .crc-code {
+		font-size: 13px !important;
+	}
+
+	.saks-fifth-avenue br,
+	.compact-print br {
+		display: none;
+	}
+	
+	#print-div-content.overlap,
+	#print-div-content.content {
+	    padding-top: 0px;
+	    padding-bottom: 0px;
+	}
+	.page-offers-benefits .wrapper-medium.saks-fifth-avenue,
+	.page-offers-benefits .wrapper-medium.compact-print {
+		max-width: none;
+	}
+	
+	.global-wrapper {
+	    padding: 0 50px;
+	}
+
+	.saks-fifth-avenue p.print-left,
+	.compact-print p.print-left {
+		float: left;
+		width: calc(100% - 200px);
+	    display: inline-block;
+	}
+
+	.saks-fifth-avenue p.text-center,
+	.compact-print p.text-center {
+		margin: 0 auto;
+	}
+	
+	.compact-print h2 {
+		margin: 20px auto 10px auto;
+	    font-family: "MSGloriolaIIStdLight", sans-serif !important;
+	    font-weight: bold !important;
+    	font-size: 18px !important;
+    	line-height: 18px !important;
+	}
+	.compact-print .print-h2 {
+		margin-bottom: 10px;
+	    font-family: "MSGloriolaIIStdLight", sans-serif !important;
+	    font-weight: bold !important;
+    	font-size: 18px !important;
+    	line-height: 18px !important;
+	}
+
+	.compact-print p strong {
+		color: #4c4c4c !important;
+    	font-size: 18px !important;
+    	line-height: 18px !important;
+	}
+
+	.saks-fifth-avenue svg,
+	.compact-print svg {
+		float: right;
+		margin-top: -8px;
+	    display: inline-block;
+	    max-width: 170px;
+	}
+}
+

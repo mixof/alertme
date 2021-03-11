@@ -1,0 +1,89 @@
+(function ($) {
+  var truncate = function (el) {
+    // var regex = /((<style>)|(<style type=.+))((\s+)|(\S+)|(\r+)|(\n+))(.+)((\s+)|(\S+)|(\r+)|(\n+))(<\/style>)/g;
+    // var subst = ``;
+    // var result = str.replace(regex, subst);
+    var height = el.height(),
+      clone = el.clone(),
+      fullTextEl = null,
+      htmlText;
+    if (el.next('.full-text').length) {
+      htmlText = el.next('.full-text').html();
+      
+      // console.log(htmlText);
+
+    } else {
+      // htmlText = el.find('style').remove();
+    	
+      htmlText = el.find('style,script,.chapter').remove().end().get(0).innerText;
+
+      // console.log(htmlText);
+      // htmlText = el;
+      // console.log(el);
+      fullTextEl = $('<div></div>');
+      fullTextEl.css({
+        position: 'absolute',
+        visibility: 'hidden',
+        height: '0px',
+        margin: '0px'
+      });
+      fullTextEl.addClass('full-text').html(htmlText);
+      el.after(fullTextEl);
+    }
+
+    clone.css({
+      position: 'absolute',
+      // visibility: 'hidden',
+      width: el.width() - 1,
+      height: 'auto',
+      maxHeight: 'auto'
+    });
+    clone.html(htmlText);
+    el.after(clone);
+
+    var currentText;
+    // console.log('item', el);
+    if (clone.height() >= height && height != 0) {
+      var partlyTrimmedTextLength;
+
+      // var diffHeight = clone.height() - height;
+
+      // var coeff = diffHeight / clone.height();
+
+      // var textCoeff = htmlText.length / clone.text().length;
+
+
+      // if (htmlText.length != clone.text().length) {
+      //   partlyTrimmedTextLength = htmlText.length;
+      // } else {
+      // partlyTrimmedTextLength = Math.ceil(htmlText.length * coeff);
+      // }
+
+      partlyTrimmedTextLength = htmlText.length;
+
+
+      for (var l = partlyTrimmedTextLength; l >= 0 && (clone.height() >= height); l = l - 3) {
+
+        currentText = htmlText.substring(0, l);
+
+        clone.html(currentText + '...');
+      }
+      clone.html(currentText.substring(0, currentText.length - 2) + '...');
+    }
+
+    // || clone.prop('scrollWidth') >= el.outerWidth()
+
+    if (clone.html() === '...') clone.text('');
+    el.html(clone.html());
+    //  setTimeout(function() {
+    clone.remove();
+    //  }, 5555);
+  };
+
+  $.fn.truncateText = function () {
+    return this.each(function () {
+      truncate($(this));
+    });
+  };
+}(jQuery));
+

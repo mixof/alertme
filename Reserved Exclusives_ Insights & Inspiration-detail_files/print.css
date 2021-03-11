@@ -1,0 +1,25 @@
+@media print{
+    header,footer,.toolbar,.button,.infoblock-list,.twocolumns__col2{
+        display: none;
+    }
+    .infoblock-list.offers{
+        margin: 0;
+    }
+    .global-wrapper{
+        padding: 0 100px;
+    }
+    .wrapper-narrow{
+        page-break-before:auto;
+    }
+    .about{
+        padding: 0;
+    }
+    .about h2{
+        margin-top: 0;
+        font-size: 70px;
+    }
+    ul>li,img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+}

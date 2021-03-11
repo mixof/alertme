@@ -1,0 +1,154 @@
+$(function(){
+	
+	processSelect();
+	
+	/* + custom file +  */
+	
+	$(".file-input").each(function(index) {
+		$(this).addClass("opacity");
+	});	
+	$(".file-input").change(function(index){
+		$(this).prevAll(".file-text").attr("value", $(this).attr("value"));
+	});
+	
+	/* - custom file - */
+	
+	/* + custom radio buttons +  */
+	processRadioButtons();
+	/* - custom radio buttons - */
+	
+});
+
+function processSelect() {
+	/* + custom select +  */
+	
+	var select = $(".select-box select");
+	var selectBox = $(".select-box");
+	select.each(function(index) {
+		$(this).addClass("opacity");
+		if(!selectBox.hasClass("editable")){
+			var value = this.selectedIndex >= 0 && this.selectedIndex < this.options.length ? this.options[this.selectedIndex].text : this.options[0].text;
+			$(this).prevAll(".sel-value").text(value);
+		}
+	});	
+	select.change(function(index){
+		if(selectBox.hasClass("editable")){
+			$(this).nextAll(".sel-value").val(this.options[this.selectedIndex].text);
+		}
+		else{
+			$(this).prevAll(".sel-value").text(this.options[this.selectedIndex].text);
+		}
+	});
+	select.keyup(function(index){
+		if(selectBox.hasClass("editable")){
+			$(this).nextAll(".sel-value").val(this.options[this.selectedIndex].text);
+		}
+		else {
+			$(this).prevAll(".sel-value").text(this.options[this.selectedIndex].text);
+		}
+	});
+	/* - custom select - */
+	select.change(function(index){
+		var inElem = $(this).parent().next('input');
+		if (this.selectedIndex == 0)
+			inElem.show();
+		else
+			inElem.hide();
+	});
+}
+
+function processRadioButtons() {
+	var radio = '<div class="radio-btn"></div>';
+	var radioActive = '<div class="radio-btn radio-btn-active"></div>';
+	$('input.radio').each(function(n, element) {
+		if ($(element).siblings('.radio-btn').length) {
+			return true;
+		}
+		var actionRadio = $(element).siblings('.action-radio'); 
+		var cmdInput = actionRadio.find('input');
+		$(element).css('display', 'none');		
+		if ($(cmdInput).attr('checked') == "checked" || actionRadio.hasClass('selected-radio')) {
+			el = $(radioActive);
+		} else {
+			el = $(radio);
+		}
+		el.insertBefore(element);
+		el.click(function() {
+			$(this).next('input').click();
+			
+		});
+	});
+	$('.radio-btn').click(function() {
+		if ($(this).hasClass('radio-btn-active')) {
+			return;
+		}
+		else{
+			$('input[name="' + $(this).siblings('input.radio').attr('name') + '"]').each(function(n, element){
+				$(element).attr('checked', false);
+				$(element).siblings('.radio-btn').removeClass('radio-btn-active');
+				
+				// Extended action
+				$(element).siblings('table.action-radio').each(function(n, element){
+					var input = $(element).find('input'); 
+					input.attr('checked', false);
+				}); 
+			}); 
+			$(this).siblings('input.radio').attr('checked', true);
+			$(this).addClass('radio-btn-active');
+
+			var siblings = $(this).siblings('.action-radio');
+			var input = siblings.find('input');
+			input.attr('checked', true);
+			/*
+			*/
+			// Extended action
+			input.click();
+		}
+	}); 
+
+
+				$("select").each(function (i) {
+					$(this).keypress(function(e){
+						if(e.which == 13) {
+							$('form').submit();
+						}
+					});
+				});
+}
+
+
+function unsubscribe() {
+
+    for (var i in CKEDITOR.instances) {
+		var editor = CKEDITOR.instances[i];
+		if (editor) {
+			var element = editor.getSelection().getSelectedElement();
+			if (element != null && element.getName() == 'a') {
+				element.setAttribute("href", 'http://%siteUrl%/unsubscribe/unsubscribe.jsf?UID=%UniqueId%');
+				element.setAttribute("data-cke-saved-href", 'http://%siteUrl%/unsubscribe/unsubscribe.jsf?UID=%UniqueId%');
+			}
+			else
+				editor.insertHtml('<a href="http://%siteUrl%/unsubscribe/unsubscribe.jsf?UID=%UniqueId%" target="_blank">Unsubscribe</a>');
+			
+			editor.updateElement(); 
+		} 
+    }
+}
+
+function viewWebVersion() {
+
+    for (var i in CKEDITOR.instances) {
+		var editor = CKEDITOR.instances[i];
+		if (editor) {
+			var element = editor.getSelection().getSelectedElement();
+			if (element != null && element.getName() == 'a') {
+				element.setAttribute("href", 'http://%siteUrl%/mailcast/preview.jsf?mailcastId=%mailcastId%%26clientId=%clientId%%26recipientId=%recipientId%');
+				element.setAttribute("data-cke-saved-href", 'http://%siteUrl%/mailcast/preview.jsf?mailcastId=%mailcastId%%26clientId=%clientId%%26recipientId=%recipientId%');
+			}
+			else
+				editor.insertHtml('<a href="http://%siteUrl%/mailcast/preview.jsf?mailcastId=%mailcastId%%26clientId=%clientId%%26recipientId=%recipientId%" target="_blank">View web version</a>');
+			
+			editor.updateElement(); 
+		} 
+    }
+}
